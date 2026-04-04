@@ -1,0 +1,7 @@
+home:
+  path: /
+  controller: App\Controller\HomeController::index
+
+proper-home:
+  path: /home
+  controller: App\Controller\HomeController::properIndex
