@@ -1,0 +1,43 @@
+<?php
+
+namespace App\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ */
+class Product{
+    /** 
+    * @ORM\Id
+    * @ORM\GeneratedValue
+    * @ORM\Column(type="integer")
+    */
+    private int $id;
+
+    /**
+    * @ORM\Column(type="string", length=255)
+    */
+    private string $name;
+
+    /**
+    * @ORM\Column(type="decimal", precision=10, scale=2)
+    */
+    private string $price;
+
+    /**
+    * @ORM\Column(type="text", nullable=true)
+    */
+    private ?string $description;
+
+    public function getId(): int { return $this->id; }
+
+    public function getName(): string { return $this->name; }
+    public function setName(string $name): void { $this->name = $name; }
+
+    public function getPrice(): string { return $this->price; }
+    public function setPrice(string $price): void { $this->price = $price; }
+
+    public function getDescription(): ?string { return $this->description; }
+    public function setDescription(?string $description): void { $this->description = $description; }
+}
