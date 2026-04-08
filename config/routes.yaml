@@ -5,3 +5,7 @@ home:
 proper-home:
   path: /home
   controller: App\Controller\HomeController::properIndex
+
+products:
+  path: /products
+  controller: App\Controller\HomeController::products
