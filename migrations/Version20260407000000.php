@@ -14,7 +14,6 @@ final class Version20260407000000 extends AbstractMigration{
             name VARCHAR(255) NOT NULL,
             price DECIMAL(10, 2) NOT NULL,
             description LONGTEXT DEFAULT NULL,
-            stock INT NOT NULL,
             PRIMARY KEY(id)
         ) DEFAULT CHARACTER SET utf8mb4 ENGINE = InnoDB");
     }
