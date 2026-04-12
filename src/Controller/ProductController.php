@@ -24,7 +24,14 @@ class ProductController extends AbstractController{
         }
 
         return $this->render("product/new.html.twig", [
-            "form" => $form->createView()
-        ]);
+                "form" => $form->createView()
+            ]);
+    }
+
+    public function products(EntityManagerInterface $em): Response{
+        $products = $em->getRepository(Product::class)->findAll();
+        return $this->render("product/myProducts.html.twig", [
+                "products" => $products
+            ]);
     }
 }
