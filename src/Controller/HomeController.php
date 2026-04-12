@@ -21,23 +21,4 @@ class HomeController extends AbstractController{
             "message" => $message
         ]);
     }
-
-    public function properIndex(): Response {
-        $message = $this->message->properWelcome();
-        return $this->render("home/index.html.twig", [
-            "message" => $message
-        ]);
-    }
-
-    public function products(): Response {
-        $products = [
-            ["name" => "Tastiera meccanica", "price" => 89.99],
-            ["name" => "Mouse ergonomica", "price" => 45.00],
-            ["name" => "Monitor 27", "price" => 299.59]
-        ];
-
-        return $this->render("home/products.html.twig", [
-            "products" => $products
-        ]);
-    }
 }

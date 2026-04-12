@@ -2,10 +2,6 @@ home:
   path: /
   controller: App\Controller\HomeController::index
 
-proper-home:
-  path: /home
-  controller: App\Controller\HomeController::properIndex
-
-products:
+product_new:
   path: /products
-  controller: App\Controller\HomeController::products
+  controller: App\Controller\ProductController::new
