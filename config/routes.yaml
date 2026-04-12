@@ -5,3 +5,7 @@ home:
 product_new:
   path: /products
   controller: App\Controller\ProductController::new
+
+my_products:
+  path: /my-products
+  controller: App\Controller\ProductController::products

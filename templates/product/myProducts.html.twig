@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block title %} My Products {% endblock %}
+{% block body %}
+    
+    <ul>
+        {% for product in products %}
+            <li>{{product.name}} - 
+                {{product.price}} €; 
+                Description: {{product.description}}; 
+                In stock: {{product.stock}}
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
